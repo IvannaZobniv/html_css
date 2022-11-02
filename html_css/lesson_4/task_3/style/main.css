@@ -1,0 +1,153 @@
+.container{
+    width: 100%;
+    height: 100vh;
+    background: #3370e5;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+}
+.menu{
+    width: 100%;
+    height: 10%;
+    background: #cdd7e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.left_menu{
+    width: 150px;
+    height: 50px;
+    background: #102b40;
+    margin-left: 30px;
+    border-radius: 10px;
+}
+.right_menu{
+    margin-right: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.fa-magnifying-glass, .fa-bars{
+    width: 50px;
+    font-size: 30px;
+}
+.side_menu{
+    width: 20%;
+    height: 100vh;
+    background: #4d85ab;
+
+}
+.side-menu-box{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /*flex-direction: column;*/
+}
+.side-menu-box-left{
+    width: 100px;
+    height: 30px;
+    background: #102b40;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header{
+    width: 80%;
+    height: 100vh;
+    background: #102b3e;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.squares3{
+    width: 100%;
+    height: 30%;
+    background: #dcce76
+
+}
+.squares4 {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    column-gap:10px;
+    background: #790617;
+}
+.squares4-box{
+    width: 80%;
+    height: 85%;
+    background: #50c9ad;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.squares5{
+    width: 80%;
+    height: 40%;
+    background: #6964e1;
+    display: flex;
+    justify-content:space-between;;
+    flex-wrap: wrap;
+    /*flex-direction: column;*/
+}
+.squares5-box-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: white;
+
+}
+.squares5-box{
+    width: 50%;
+    height: 14%;
+    background: #402c8a;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.squares6{
+    width: 20%;
+    height: 40%;
+    background: #ffdd00;
+    display: flex;
+    justify-content:space-between;;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+}
+.squares6-box-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.squares6-box{
+    width: 80%;
+    height: 50%;
+    background: #ff8800;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.squares7{
+    width: 100%;
+    height: 10%;
+    background: #dcce76
+}
+
+
