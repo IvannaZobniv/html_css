@@ -272,3 +272,21 @@ for (const book of books){
     }
 }
 console.log(coUnt4);
+
+
+let harry= '%$#*^%   - **Harry-23234-       Potter3333';
+
+let harry2 = harry.split('')
+let badChar = ['%','$','#','*','^','-','0','1','2','3','4','5','6','7','8','9'];
+for (let letter in harry) {
+    for (let char in badChar) {
+        if (letter === char) {
+            harry = harry.slice(0, harry.indexOf(letter)) + harry.slice(harry.indexOf(letter)+1)
+
+
+            //harry2.splice(harry2.indexOf(letter)-1,1)
+            //let harry3 = harry2.replace(letter, '')
+            console.log(harry);
+        }
+    }
+}
