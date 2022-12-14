@@ -274,19 +274,27 @@ for (const book of books){
 console.log(coUnt4);
 
 
-let harry= '%$#*^%   - **Harry-23234-       Potter3333';
+let harry= 'Ha2rry....@#$123454 potter';
+let ron ='Ron---   !@#$%^&*()_+=-  Whisley';
+let hermione = 'Herm^ione{}|~`";:"/<>?/.,__ Gra#nger';
 
-let harry2 = harry.split('')
-let badChar = ['%','$','#','*','^','-','0','1','2','3','4','5','6','7','8','9'];
-for (let letter in harry) {
-    for (let char in badChar) {
-        if (letter === char) {
-            harry = harry.slice(0, harry.indexOf(letter)) + harry.slice(harry.indexOf(letter)+1)
-
-
-            //harry2.splice(harry2.indexOf(letter)-1,1)
-            //let harry3 = harry2.replace(letter, '')
-            console.log(harry);
+let normalizes1 = str =>{
+    let space = str.replace(' ','Space');
+    let replaceSymbol = ['`',"'",'_','-','"',',','.','/','|','{','}','?','~','!','@','#','$','1','2','3','4','5',
+        '6','7','8','9','0','%','^','&','*','(',')','=','+','<','>',';',':']
+    for (const stringElement of replaceSymbol)
+        for (const stringElement of replaceSymbol){
+            space = space.replace(stringElement, ' ');
+        }
+    let newStr = space.split(' ');
+    let string = '';
+    for (let i=0; i<newStr.length; i++){
+        if (newStr[i]){
+            string +=newStr[i];
         }
     }
+    return string.trim().replace('Space',' ');
 }
+console.log(normalizes1(harry));
+console.log(normalizes1(ron));
+console.log(normalizes1(hermione));

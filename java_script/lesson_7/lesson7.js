@@ -140,13 +140,13 @@ class Car1 {
         this.driver = driver;
     }
 }
-const Carrr= new Car1('Tesla','Ilon Mask','2020',300, 'Null')
-Carrr.drive1();
-Carrr.info1();
-Carrr.increaseMaxSpeed1(200);
-Carrr.changeYear1(2024);
-Carrr.addDriver1('Bob');
-console.log(Carrr);
+const сarrr= new Car1('Tesla','Ilon Mask','2020',300, 'Null')
+сarrr.drive1();
+сarrr.info1();
+сarrr.increaseMaxSpeed1(200);
+сarrr.changeYear1(2024);
+сarrr.addDriver1('Bob');
+console.log(сarrr);
 // -------------------------------------------------------------------------------------------------------------------
 // створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити масив з 10 попелюшок.
 function Cinderella(name,age,footSize){
