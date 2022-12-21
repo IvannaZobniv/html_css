@@ -74,8 +74,11 @@ const userCard =(id)=>{
     let  transactionLimit = 100;
     const historyLogs = [];
     const key = id;
+
     const createMassage =(operationType,credits) =>({operationType,credits,operationTime:new Date()});
+
     const getCardOptions = ()=> ({balance,historyLogs,transactionLimit,key});
+
     const putCredits = (money)=>{
         balance+=money;
         historyLogs.push(createMassage('putCredits',money));
@@ -89,10 +92,27 @@ const userCard =(id)=>{
             console.error('not money!!!');
         }
     }
+    const  setTransactionLimit = (id)=>{
+        transactionLimit = id;
+        historyLogs.push(createMassage('setTransactionLimit',id));
+    }
+    const transferCredits =(sum,card)=>{
+        let startSum;
+        if (balance > sum) {
+            startSum = sum;
+            sum = sum + (sum * 0.005)
+            balance -= sum;
+            card.putCredits(startSum);
+            historyLogs.push(createMassage('transferCredits', sum, card))
+        } else {
+        }console.error(`На балансі недостатньо коштів!`)
+    }
     return{
         getCardOptions,
         putCredits,
-        takeCredits
+        takeCredits,
+        setTransactionLimit,
+        transferCredits
     }
 }
 // частина 2
@@ -122,22 +142,31 @@ const user2 = new UserAccount('Vasya');
 user2.addCard();
 user2.addCard();
 // user2.addCard();
+
+// user2.addCard();
 // user2.addCard();
 
-const card2 = user2.getCardByKey(1);
-const card3 = user2.getCardByKey(2);
+const card1 = user2.getCardByKey(1);
+const card2 = user2.getCardByKey(2);
+// const card3 = user2.getCardByKey(3);
 // console.log(card2);
 
-card2.putCredits(200);
-console.log(card2.getCardOptions());
+// card3.transferCredits(50, card1);
 
+card1.putCredits(500);
+card1.setTransactionLimit(800);
+card1.transferCredits(300,card2);
+card2.takeCredits(50);
+console.log(card1.getCardOptions());
+console.log(card2.getCardOptions());
+// console.log(card3.getCardOptions());
 console.log('---------------------------------');
 
 // card3.takeCredits(20);
 // console.log(card3.getCardOptions())
 // якщо більше ніж 100 money
-card3.takeCredits(120);
-console.log(card3.getCardOptions());
+// card3.takeCredits(50);
+// console.log(card3.getCardOptions());
 
 
 
