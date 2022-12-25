@@ -1,43 +1,142 @@
  /*user-details.html - блок з інфою про user зверху сторінки. Кнопка нижчє, на 90% ширини сторінки, по центру.*/
  /*блоки з короткою іфною про post - в ряд по 5 .*/
  body {
-     background-color: #82a0c2;
+     font-family: tahoma;
+     background-image: url(https://picsum.photos/g/3000/2000);
+     background-size: cover;
+     background-position: center;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .row{
+     /*width: 100%;*/
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     column-gap: 15px;
+     margin-top: 5%;
+ }
+ .col-12{
+     width: 500px;
+ }
+ .our-team {
+     padding: 30px 0 40px;
+     margin-bottom: 30px;
+     background-color: #f7f5ec;
+     text-align: center;
+     overflow: hidden;
+     position: relative;
+
+ }
+ .our-team .picture {
+     display: inline-block;
+     height: 130px;
+     width: 130px;
+     margin-bottom: 50px;
+     z-index: 1;
+     position: relative;
+ }
+ .our-team .picture::before {
+     content: "";
+     width: 100%;
+     height: 0;
+     border-radius: 50%;
+     background-color: #051a33;
+     position: absolute;
+     bottom: 135%;
+     right: 0;
+     left: 0;
+     opacity: 0.9;
+     transform: scale(3);
+     transition: all 0.3s linear 0s;
+ }
+ .our-team:hover .picture::before {
+     height: 100%;
+ }
+ .our-team .picture::after {
+     content: "";
+     width: 100%;
+     height: 100%;
+     border-radius: 50%;
+     background-color: #051a33;
+     position: absolute;
+     top: 0;
+     left: 0;
+     z-index: -1;
+ }
+
+ .our-team .picture img {
+     width: 100%;
+     height: auto;
+     border-radius: 50%;
+     transform: scale(1);
+     transition: all 0.9s ease 0s;
+ }
+
+ .our-team:hover .picture img {
+     box-shadow: 0 0 0 14px #f7f5ec;
+     transform: scale(0.7);
+ }
+
+ .our-team .title {
+     display: block;
+     font-size: 15px;
+     color: #4e5052;
+     text-transform: capitalize;
+ }
+
+ .our-team .social {
+     width: 100%;
+     padding: 0;
+     margin: 0;
+     background-color: #051a33;
+     position: absolute;
+     bottom: -100px;
+     left: 0;
+     transition: all 0.5s ease 0s;
+ }
+
+ .our-team:hover .social {
+     bottom: 0;
+ }
+
+ .our-team .social li {
+     display: inline-block;
+ }
+
+ .our-team .social li a {
+     display: block;
      padding: 10px;
+     font-size: 17px;
+     color: white;
+     transition: all 0.3s ease 0s;
+     text-decoration: none;
  }
- .userCard {
-     background-color: #1f768c;
-     box-sizing: border-box;
-     width: 550px;
-     margin: 0 auto;
-     padding: 20px;
-     border-bottom-left-radius: 5px;
-     border-bottom-right-radius: 5px;
+
+ .our-team .social li a:hover {
+     color: #051a33;
+     background-color: #f7f5ec;
  }
+
  a:link {text-decoration: none;}
  a:visited {text-decoration: none;}
  a:hover {text-decoration: underline;}
  a:active {text-decoration: underline;}
 
  .text {
-     width: 90%;
-     position: relative;
-     left: 10%;
-     margin-left: 0.5em;
-     text-align: left;
      font-size: 1.2em;
      font-family: monospace;
      font-weight: bold;
      white-space: normal;
-     overflow: hidden;
-     width: 0;
      animation: type .5s 1s steps(20, end)
  }
  span {
-     color: #fff;
+     color: #000000;
      font-weight: bold;
  }
  .line1 {
-     color: #9CD9F0;
      animation: type .5s 1s steps(20, end) forwards;
  }
 
@@ -45,39 +144,9 @@
      animation: blink 1s 2s 2 forwards;
  }
 
- .line2 {
-     color: lightgreen;
-     animation: type .5s 4s steps(20, end) forwards;
- }
-
- .cursor2 {
-     animation: blink 1s 3s 10 forwards;
- }
-
- .line3 {
-     color: #E09690;
-     animation: type .5s 4.5s steps(20, end) forwards;
- }
-
- .cursor3 {
-     animation: blink 1s 3.5s 2 forwards;
- }
-
- .line4 {
-     color: #fff;
-     animation: type .5s 10.75s steps(20, end) forwards;
- }
-
- .cursor4 {
-     animation: blink 1s 8.5s infinite;
- }
-
  .button {
-     background-color: #e77171;
-     color: #790617;
-     border: none;
-     width: 150px;
-     position: relative;
+     background-color: #100e0e;
+     color: #e8dedf;
      left: 10%;
      margin-left: 0.5em;
      text-align: center;
@@ -86,7 +155,7 @@
      font-weight: bold;
      white-space: normal;
      overflow: hidden;
-     /*animation: blink 1s 5.5s infinite;*/
+     animation: blink 1s 5.5s infinite;
 
  }
 
@@ -108,8 +177,4 @@
      }
  }
 
- @keyframes type {
-     to {
-         width: 90%;
-     }
- }
+

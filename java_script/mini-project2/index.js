@@ -4,26 +4,19 @@
 // 3 Додати кожному блоку кнопку/посилання , при кліку на яку відбувається перехід  на сторінку
 // user-details.html, котра має детальну інфорацію про об'єкт на який клікнули
 
-const screenOne = document.getElementsByClassName('screenOne')[0];
-document.body.append(screenOne);
+// const screenOne = document.getElementsByClassName('screenOne')[0];
+// document.body.append(screenOne);
 
 fetch(`https://jsonplaceholder.typicode.com/users`)
     .then(response=>response.json())
     .then(response => {
+        let i = 0
         for (const item of response){
-            const userDiv = document.createElement('div');
-            userDiv.classList.add('text');
-            userDiv.classList.add('line1');
-            userDiv.innerText =`${item.id}_____${item.name}-`;
-            // box.append(userDiv);
-            screenOne.append(userDiv);
-            // const link = document.getElementsByClassName('link__title')[0];
-            // link.classList.add('line2');
-            // link.innerText = 'Details!';
-            //
-            // link.href = `user-details.html?id=${item.id}`;
-            // userDiv.append(link);
-
+            const userDiv = document.getElementsByClassName('name')
+            userDiv[i].textContent = `${item.id}_____${item.name}-`;
+            const link = document.getElementsByClassName('link__title');
+            link[i].href = `user-details.html?id=${item.id}`;
+            i++
         }
     });
 

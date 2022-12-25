@@ -10,9 +10,7 @@ const id = url.searchParams.get('id');
 fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
     .then(value => value.json())
     .then((users) => {
-        let div = document.createElement('div');
-        div.classList.add('userCard');
-
+        let div = document.getElementsByClassName('team-content')[0];
         let userheaderName =document.createElement('h2');
         userheaderName.classList.add('userheaderName');
         userheaderName.classList.add('text');
@@ -121,6 +119,4 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
                     })}
 
         div.append(userheaderName, userNameId, phone, email, website, address, companyName, catchPhrase,bs,button,posts)
-        document.body.appendChild(div);
-
     })
