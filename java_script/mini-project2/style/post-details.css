@@ -2,7 +2,7 @@
 /*Всі елементи котрі характеризують users, posts, comments візуалізувати, так, щоб було видно що це блоки*/
 /*(дати фон. марджини і тд)*/
 body {
-    font-family: tahoma;
+
     height: 100vh;
     background-image: url(https://picsum.photos/g/3000/2000);
     background-size: cover;
@@ -20,9 +20,6 @@ body {
     margin:  auto;
     padding: 20px;
     margin-top: 10px;
-
-    /*border-bottom-radius: 50px;*/
-    /*border-bottom-right-radius: 50px;*/
     border-radius: 50px;
 }
 .text {

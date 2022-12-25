@@ -1,7 +1,7 @@
  /*user-details.html - блок з інфою про user зверху сторінки. Кнопка нижчє, на 90% ширини сторінки, по центру.*/
  /*блоки з короткою іфною про post - в ряд по 5 .*/
  body {
-     font-family: tahoma;
+
      background-image: url(https://picsum.photos/g/3000/2000);
      background-size: cover;
      background-position: center;
