@@ -1,0 +1,31 @@
+.paragraf {
+    text-align: -moz-center;
+    background: cadetblue;
+    color: darkblue;
+    border-radius: 10px;
+    margin: 0;
+    border: 0;
+}
+.header1{
+
+    text-align: center;
+    border-radius: 10px;
+    margin: 0;
+    width:250px;
+    color:darkgreen;
+    background-color:darkseagreen;
+}
+.header2 {
+    text-align: center;
+    border-radius: 10px;
+    color: aqua;
+    background: coral;
+}
+.li{
+    width: 10%;
+    background: chartreuse;
+    color: #790617;
+}
+.ul{
+    list-style:square;
+}

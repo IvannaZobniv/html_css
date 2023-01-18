@@ -1,0 +1,33 @@
+.box1 {
+    height: 400px;
+}
+.box1, .box3{
+    background: #2269ba;
+    box-sizing: border-box;
+}
+.box2_0{
+    display: flex;
+    justify-content: space-between;
+    column-gap:20px;
+}
+.box2_1 {
+    background: #16457a;
+    box-sizing: border-box;
+    height: 600px;
+    width: 400px;
+    margin: 20px 0 20px ;
+}
+.box3{
+    height: 600px;
+}
+.text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 35px;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    text-align: center;
+
+}

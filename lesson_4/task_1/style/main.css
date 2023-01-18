@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    overflow-x: hidden;
+}
+.box_main{
+    width: 100%;
+    height:100vh;
+    /*background: #97a5c0;*/
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+}
+.box_A{
+    width: 99%;
+    height: 28%;
+    background: #102b3e;
+}
+.box_B{
+    width: 70%;
+    height: 68%;
+    background: #285779;
+    margin-right: 10px;
+}
+.box_C{
+    width: 28%;
+    height: 68%;
+    background: #628ba9;
+}
+.box_A,.box_B,.box_C{
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

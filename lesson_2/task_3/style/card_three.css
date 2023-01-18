@@ -1,0 +1,67 @@
+.top{
+    box-sizing: border-box;
+    background: #97a5c0;
+    padding: 0 10px 40px 10px;
+    font-family: Arial, sans-serif;
+}
+.loft{
+    text-transform: uppercase;
+    text-align: center;
+    box-sizing: border-box;
+    padding-bottom: 40px;
+    font-size: 30px;
+}
+.cards{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap:30px;
+}
+.card{
+    background: #f3f1ed;
+    border: 1px solid black;
+    height: auto;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+}
+.fa-star, .fa-location-dot, .fa-fire, .fa-earth-americas{
+    color: #989898;
+    font-size: 50px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.box{
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    color: #c68b5f;
+    font-size: 30px;
+}
+.paragraf {
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    padding: 15px;
+    color: #989898;
+    font-size: 20px;
+}
+.little_boxes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+.lorem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #f3f1ed;
+    background: #55c2b5;
+    color: #f3f1ed;
+    width:200px;
+    font-size: 20px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    padding: 15px;
+}
